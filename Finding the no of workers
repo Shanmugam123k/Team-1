@@ -1,0 +1,32 @@
+public class Department {
+    private static int numberOfWorkers = 0;
+    private int workers;
+
+    public Department(int workers) {
+        this.workers = workers;
+        numberOfWorkers += workers;
+    }
+
+    public int getWorkers() {
+        return workers;
+    }
+
+    public static int getTotalNumberOfWorkers() {
+        return numberOfWorkers;
+    }
+
+    public static void main(String[] args) {
+        // Creating instances of Department with specified number of workers
+        Department dept1 = new Department(10);
+        Department dept2 = new Department(15);
+        Department dept3 = new Department(20);
+
+        // Getting the number of workers for each department
+        System.out.println("Dept1 has " + dept1.getWorkers() + " workers");
+        System.out.println("Dept2 has " + dept2.getWorkers() + " workers");
+        System.out.println("Dept3 has " + dept3.getWorkers() + " workers");
+
+        // Getting the total number of workers
+        System.out.println("Total number of workers: " + Department.getTotalNumberOfWorkers());
+    }
+}
