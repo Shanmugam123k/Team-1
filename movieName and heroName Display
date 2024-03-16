@@ -1,0 +1,41 @@
+public class Movie {
+
+    private String heroName;
+    private String directorName;
+
+    
+    public Movie(String heroName) {
+        this.heroName = heroName;
+    }
+
+    
+    public Movie(String heroName, String directorName) {
+        this.heroName = heroName;
+        this.directorName = directorName;
+    }
+
+    public String getHeroName() {
+        return heroName;
+    }
+
+    public String getDirectorName() {
+        return directorName;
+    }
+
+    public void displayDetails() {
+        System.out.println("Hero Name: " + heroName);
+        if (directorName != null) {
+            System.out.println("Director: " + directorName);
+        }
+    }
+
+    public static void main(String[] args) {
+        
+        Movie bachelor= new Movie("Bachelor");
+        bachelor.displayDetails();  
+
+       
+        Movie inception = new Movie("Bachelor", "Satish selvakumar");
+        inception.displayDetails();  
+    }
+}
